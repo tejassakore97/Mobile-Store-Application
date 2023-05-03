@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR_CODE</title>
+</head>
+<body style="padding-block-start: 8%;padding-inline-start: 30%; background-color: rgb(167, 211, 244);">
+<div class="col-sm-6">
+    <h2>Scan QR And Make Payment..!!</h2>
+    <div class="" style="border: solid rgb(0, 136, 255) 3px; width: 500px; height: 500px; background-color: rgb(248, 248, 248); ">
+
+
+        <!-- <b style="text-align: center; margin-left: 10%; font-size: 20px;">Scan the qr code and make a Payment</b> -->
+        <!-- <img src="../static/invoiceAndQr/QR.png" alt=""> -->
+        <img  src="../static/invoiceAndQr/QR.png" th:src="@{/invoiceAndQr/QR.png}" alt="QR_CODE" class="qr">
+        <form action=""   onclick="cod()" th:action="@{/SuccessQrPayment}" >
+            <input type="submit" onclick="qrcode1()"  style="width: 250px;  margin-block-start:0%; margin-inline-start: 25%;" value="Continue" class="btn btn-primary btn-size-sm btn-block">
+        </form>
+
+        <!-- <button onclick="qrcode1()">Generate QR-CODE</button> -->
+        <!-- <button onclick="qrcode2()">PROMPT BOX</button>
+        <button onclick="qrcode3()">PROMPT BOX</button> -->
+
+
+    </div>
+</div>
+
+<script>
+      function qrcode1(){
+        window.alert("Payment Done Sucessfully!")
+      }
+      function qrcode2(){
+        window.prompt("This is the Prompt Box")
+      }
+      function qrcode3(){
+        window.confirm("This is the cofirmation box!!!")
+      }
+    </script>
+<style>
+      .qr{
+        size: 10%;
+    size: 300px;
+    height: 85%;
+    width: 85%;
+    padding-inline: -3%;
+    padding-inline-start: -5%;
+    margin-block-start: 6%;
+    margin-inline-start: 6%;
+      }
+    </style>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
